@@ -1,0 +1,91 @@
+body {
+  background-color: rgb(230, 230, 230);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider {
+  max-width: 800px;
+  overflow-x: hidden;
+  border: 2px solid tomato;
+  margin: 0 auto;
+}
+
+.slider__list {
+  display: flex;
+  transition: all 400ms ease 0s;
+}
+
+#slide-1:checked ~ .slider__list{
+  transform: translateX(0);
+}
+
+#slide-2:checked ~ .slider__list{
+  transform: translateX(-800px);
+}
+
+#slide-3:checked ~ .slider__list{
+  transform: translateX(-1600px);
+}
+
+#slide-4:checked ~ .slider__list{
+  transform: translateX(-2400px);
+}
+
+
+
+.slider__item {
+  position: relative;
+  flex-basis: 100%;
+  flex-shrink: 0;
+}
+
+.slider__item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  gap: 5px;
+}
+
+.navigation__button {
+  width: 8px;
+  height: 8px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid darkgreen;
+}
+
+.navigation__button:hover,
+.navigation__button:focus {
+  opacity: 0.8;
+}
+
+input[name="slider"] {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+#slide-1:checked ~ .navigation label:nth-child(1) {
+  background-color: green;
+}
+
+#slide-2:checked ~ .navigation label:nth-child(2) {
+  background-color: green;
+}
+
+#slide-3:checked ~ .navigation label:nth-child(3) {
+  background-color: green;
+}
+
+#slide-4:checked ~ .navigation label:nth-child(4) {
+  background-color: green;
+}

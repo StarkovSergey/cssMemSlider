@@ -65,6 +65,10 @@ ul {
   align-self: center;
 }
 
+.navigation label:active .circle {
+  background-color: tomato;
+}
+
 .navigation__button {
   padding: 7px;
   cursor: pointer;
@@ -75,6 +79,7 @@ ul {
   border: 2px solid darkgreen;
   width: 14px;
   height: 14px;
+  transition: background-color 200ms ease 0s;
 }
 
 .navigation__button:hover,
@@ -146,5 +151,9 @@ input[name="slider"] {
   .navigation {
     grid-row: 2 / 3;
     justify-self: center;
+  }
+
+  .slider__item {
+    height: 300px;
   }
 }
